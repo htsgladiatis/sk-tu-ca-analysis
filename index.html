@@ -67,8 +67,13 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .brand b{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em}
 .brand span{display:block;font-size:10px;color:var(--txt-3);font-family:'JetBrains Mono',monospace;letter-spacing:.1em}
 .brand-logo{height:30px;width:auto;display:block;color:var(--txt);filter:drop-shadow(0 0 14px color-mix(in srgb,var(--acc) 30%,transparent))}
-.brand-sub{font-size:10px;color:var(--txt-3);font-family:'JetBrains Mono',monospace;letter-spacing:.1em;border-left:1px solid var(--line);padding-left:11px}
-@media(max-width:760px){.brand-sub{display:none}.brand-logo{height:26px}}
+.brand-sub{font-size:10px;color:var(--txt-3);font-family:'JetBrains Mono',monospace;letter-spacing:.12em;border-left:1px solid var(--line);padding-left:12px;text-transform:uppercase}
+.ca-link{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.04em;text-decoration:none;color:var(--violet);background:color-mix(in srgb,var(--violet) 12%,transparent);border:1px solid color-mix(in srgb,var(--violet) 30%,transparent);border-radius:10px;padding:7px 13px;transition:all .2s var(--ease);flex-shrink:0;white-space:nowrap}
+.ca-link:hover{color:var(--txt);background:color-mix(in srgb,var(--violet) 20%,transparent);border-color:var(--violet);transform:translateY(-1px);box-shadow:0 4px 14px rgba(139,92,255,.22)}
+[data-theme="light"] .ca-link:hover{box-shadow:0 4px 14px rgba(109,59,255,.18)}
+.ca-link .ix{font-family:'JetBrains Mono',monospace;font-size:11px;opacity:.7;transition:transform .2s var(--ease),opacity .2s}
+.ca-link:hover .ix{transform:translate(1px,-1px);opacity:1}
+@media(max-width:760px){.brand-sub{display:none}.brand-logo{height:26px}.ca-link{padding:6px 10px;font-size:11px}}
 .hdr-sp{flex:1}
 .status{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--txt-2);padding:5px 11px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
 .status .led{width:7px;height:7px;border-radius:50%;background:var(--up);box-shadow:0 0 8px var(--up);animation:pulse 2s infinite}
@@ -227,7 +232,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 
 @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:38px}.bal{order:-1}}
 @media(max-width:560px){.hero h1{font-size:29px}.wrap{padding:22px 16px 50px}.srow{grid-template-columns:1fr;gap:2px}}
-@media print{.navbar,.to-top,.tgl,.bar-prog{display:none}}
+@media print{.navbar,.to-top,.tgl,.bar-prog,.ca-link{display:none}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -246,6 +251,9 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 </svg>
       <span class="brand-sub">AUDIENCE INTEL · SK-TU.RU</span>
     </div>
+    <a class="ca-link" href="https://htsgladiatis.github.io/sk-tu-dashboard-new/" target="_blank" rel="noopener noreferrer" aria-label="Дашборд — маркетинговая аналитика sk-tu.ru · msk.sk-tu.ru, откроется в новой вкладке">
+      <span class="ix">↗</span>Дашборд
+    </a>
     <div class="hdr-sp"></div>
     <span class="status"><span class="led"></span>DATA: ВЕБМАСТЕР + ДИРЕКТ + ВОРОНКА</span>
     <button class="tgl" id="tgl" role="switch" aria-checked="true" aria-label="Тема"><span class="tgl-k" id="tglK">🌙</span></button>
